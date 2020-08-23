@@ -27,7 +27,6 @@ final class FlickrMainViewController: UIViewController {
 extension FlickrMainViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return photos.count
-        //        return 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -63,11 +62,11 @@ extension FlickrMainViewController: UICollectionViewDelegateFlowLayout {
     
     struct Constants {
         static let numberOfColumns: CGFloat = 3
-        static let listRowHeight: CGFloat = 200
+//        static let listRowHeight: CGFloat = 200
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let itemWidth = collectionView.bounds.width / Constants.numberOfColumns
+        let itemWidth = (collectionView.bounds.width / Constants.numberOfColumns) - 1
         return CGSize(width: itemWidth, height: itemWidth + 25)
     }
 }
@@ -125,7 +124,6 @@ extension FlickrMainViewController {
                 print(photos)
                 completion?(photos.photos)
         }
-        
     }
     
     private func loadNextPage() {

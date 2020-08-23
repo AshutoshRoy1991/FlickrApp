@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Photo : Codable {
+struct Photo : Decodable {
     let farm : Int
     let id : String
     
