@@ -22,7 +22,7 @@ struct Photo : Decodable {
     let title: String
     
     var imageURL: String {
-        let urlString = String(format: Constants.imageURL, farm, server, id, secret)
+        let urlString = String(format: FlickrConstants.imageURL, farm, server, id, secret)
         return urlString
     }
 }

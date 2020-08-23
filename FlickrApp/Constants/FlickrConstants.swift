@@ -8,7 +8,7 @@
 
 import UIKit
 
-class Constants: NSObject {
+class FlickrConstants: NSObject {
 
     static let api_key = "062a6c0c49e4de1d78497d13a7dbb360"
     static let per_page = 20

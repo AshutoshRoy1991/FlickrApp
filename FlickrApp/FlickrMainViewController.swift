@@ -13,7 +13,7 @@ final class FlickrMainViewController: UIViewController {
     var photos: [Photo] = []
     private var pageNo = 1
     private var totalPages = 1
-    private var searchText = ""
+    private var searchText = "Apple"
     
     @IBOutlet weak var collectionView: UICollectionView!
     
@@ -62,7 +62,6 @@ extension FlickrMainViewController: UICollectionViewDelegateFlowLayout {
     
     struct Constants {
         static let numberOfColumns: CGFloat = 3
-//        static let listRowHeight: CGFloat = 200
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -94,7 +93,6 @@ extension FlickrMainViewController {
             }
             
             if let photos = photos?.photo {
-                //                selfie.photos = photos
                 selfie.photos.append(contentsOf: photos)
                 selfie.collectionView.reloadData()
             }
@@ -105,15 +103,14 @@ extension FlickrMainViewController {
         let url = URL(string: "https://api.flickr.com/services/rest/")!
         var parameters = [
             "method" : "flickr.photos.search",
-            "api_key" : "062a6c0c49e4de1d78497d13a7dbb360",
             "sort": "relevance",
-            "per_page" : "20",
             "format" : "json",
             "nojsoncallback" : "1",
         ]
-        
         parameters["text"] = searchText
         parameters["page"] = String(pageNo)
+        parameters["api_key"] = FlickrConstants.api_key
+        parameters["per_page"] = String(FlickrConstants.per_page)
         
         AF.request(url, parameters: parameters).validate()
             .responseDecodable(of: PhotoResponse.self) { response in
@@ -127,7 +124,6 @@ extension FlickrMainViewController {
     }
     
     private func loadNextPage() {
-        print("load Next")
         if pageNo < totalPages {
             pageNo += 1
             getFlickrPhotos()
