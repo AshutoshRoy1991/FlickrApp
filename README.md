@@ -1,0 +1,2 @@
+# FlickrApp
+initial project creation
