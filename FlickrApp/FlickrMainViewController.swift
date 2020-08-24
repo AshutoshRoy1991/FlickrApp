@@ -60,12 +60,8 @@ extension FlickrMainViewController: UICollectionViewDataSource, UICollectionView
 // MARK: - UICollectionViewFlowLayout
 extension FlickrMainViewController: UICollectionViewDelegateFlowLayout {
     
-    struct Constants {
-        static let numberOfColumns: CGFloat = 3
-    }
-    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let itemWidth = (collectionView.bounds.width / Constants.numberOfColumns) - 1
+        let itemWidth = (collectionView.bounds.width / FlickrConstants.defaultColumnCount) - 1
         return CGSize(width: itemWidth, height: itemWidth + 25)
     }
 }
