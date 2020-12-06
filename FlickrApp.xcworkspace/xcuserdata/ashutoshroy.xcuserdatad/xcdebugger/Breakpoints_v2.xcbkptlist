@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "DD2E5369-9C50-496B-9D7A-22C8125090A5"
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0F73B68A-DE93-490A-9212-F1BFD6DA1B6A"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FlickrApp/FlickrMainViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "100"
+            endingLineNumber = "100">
+            <Locations>
+               <Location
+                  uuid = "0F73B68A-DE93-490A-9212-F1BFD6DA1B6A - ba26a125c7ea8466"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "FlickrApp.FlickrMainViewController.getFlickrPhotos() -&gt; ()"
+                  moduleName = "FlickrApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ashutoshroy/Documents/FlickrApp_MVVM/FlickrApp/FlickrMainViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "100"
+                  endingLineNumber = "100"
+                  offsetFromSymbolStart = "25">
+               </Location>
+               <Location
+                  uuid = "0F73B68A-DE93-490A-9212-F1BFD6DA1B6A - 86d9230f1bb7d8b5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Swift.Array&lt;FlickrApp.Photo&gt;&gt;) -&gt; () in FlickrApp.FlickrMainViewController.getFlickrPhotos() -&gt; ()"
+                  moduleName = "FlickrApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ashutoshroy/Documents/FlickrApp_MVVM/FlickrApp/FlickrMainViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "100"
+                  endingLineNumber = "100"
+                  offsetFromSymbolStart = "74">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0E5DF68B-D90C-44DF-A046-53C96AC996D7"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FlickrApp/FlickrMainViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "19"
+            endingLineNumber = "19"
+            landmarkName = "getFlickrPhotos(searchText:pageNo:completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "0E5DF68B-D90C-44DF-A046-53C96AC996D7 - b34fe01109e02960"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "FlickrApp.FlickrMainViewModel.getFlickrPhotos(searchText: Swift.Optional&lt;Swift.String&gt;, pageNo: Swift.Int, completion: (Swift.Optional&lt;Swift.Array&lt;FlickrApp.Photo&gt;&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "FlickrApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ashutoshroy/Documents/FlickrApp_MVVM/FlickrApp/FlickrMainViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "132">
+               </Location>
+               <Location
+                  uuid = "0E5DF68B-D90C-44DF-A046-53C96AC996D7 - fc05fe531881db5f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;FlickrApp.Photos&gt;) -&gt; () in FlickrApp.FlickrMainViewModel.getFlickrPhotos(searchText: Swift.Optional&lt;Swift.String&gt;, pageNo: Swift.Int, completion: (Swift.Optional&lt;Swift.Array&lt;FlickrApp.Photo&gt;&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "FlickrApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ashutoshroy/Documents/FlickrApp_MVVM/FlickrApp/FlickrMainViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "234">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5A8F31DA-31AB-4D96-BA1C-269A00951E46"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FlickrApp/FlickrMainViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
+            landmarkName = "getFlickrPhotos(searchText:pageNo:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D9B8EEC9-B863-486C-9454-D01C1869F9A8"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FlickrApp/FlickrMainViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "107"
+            endingLineNumber = "107">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
