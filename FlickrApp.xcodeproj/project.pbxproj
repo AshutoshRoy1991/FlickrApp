@@ -19,6 +19,7 @@
 		758EF46F24F2D0E700DDC43D /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 758EF46E24F2D0E700DDC43D /* Photo.swift */; };
 		758EF47124F2D0FF00DDC43D /* Photos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 758EF47024F2D0FF00DDC43D /* Photos.swift */; };
 		758EF47324F2D15500DDC43D /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 758EF47224F2D15500DDC43D /* PhotoCell.swift */; };
+		759D7C2124F445FE009FA26D /* FlickrMainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 759D7C2024F445FE009FA26D /* FlickrMainViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		758EF46E24F2D0E700DDC43D /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		758EF47024F2D0FF00DDC43D /* Photos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photos.swift; sourceTree = "<group>"; };
 		758EF47224F2D15500DDC43D /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
+		759D7C2024F445FE009FA26D /* FlickrMainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickrMainViewModel.swift; sourceTree = "<group>"; };
 		BA89D75B0007B78D02A72D00 /* Pods-FlickrApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlickrApp.debug.xcconfig"; path = "Target Support Files/Pods-FlickrApp/Pods-FlickrApp.debug.xcconfig"; sourceTree = "<group>"; };
 		D7CFC9C4980CDD64B0B0A45E /* Pods_FlickrApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FlickrApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2FFE86A7E7B7C8B552E2384 /* Pods-FlickrApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlickrApp.release.xcconfig"; path = "Target Support Files/Pods-FlickrApp/Pods-FlickrApp.release.xcconfig"; sourceTree = "<group>"; };
@@ -83,6 +85,7 @@
 				758EF45924F2BE6A00DDC43D /* LaunchScreen.storyboard */,
 				758EF45C24F2BE6A00DDC43D /* Info.plist */,
 				758EF47224F2D15500DDC43D /* PhotoCell.swift */,
+				759D7C2024F445FE009FA26D /* FlickrMainViewModel.swift */,
 			);
 			path = FlickrApp;
 			sourceTree = "<group>";
@@ -242,6 +245,7 @@
 				758EF44F24F2BE6800DDC43D /* AppDelegate.swift in Sources */,
 				758EF45124F2BE6800DDC43D /* SceneDelegate.swift in Sources */,
 				758EF47324F2D15500DDC43D /* PhotoCell.swift in Sources */,
+				759D7C2124F445FE009FA26D /* FlickrMainViewModel.swift in Sources */,
 				758EF46D24F2D0B200DDC43D /* PhotoResponse.swift in Sources */,
 				758EF46B24F2D08E00DDC43D /* FlickrConstants.swift in Sources */,
 				758EF47124F2D0FF00DDC43D /* Photos.swift in Sources */,
