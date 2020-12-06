@@ -10,12 +10,13 @@ import UIKit
 import Alamofire
 
 final class FlickrMainViewController: UIViewController {
-    var photos: [Photo] = []
     private var pageNo = 1
     private var totalPages = 1
     private var searchText = "Apple"
     
     @IBOutlet weak var collectionView: UICollectionView!
+    
+    private var viewModel = FlickrMainViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,13 +27,13 @@ final class FlickrMainViewController: UIViewController {
 // MARK: - UICollectionView
 extension FlickrMainViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return photos.count
+        return viewModel.photos.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PhotoCell", for: indexPath) as! PhotoCell
         
-        let photo = photos[indexPath.row]
+        let photo = viewModel.photos[indexPath.row]
         cell.imageURL = photo.imageURL
         cell.imageName = photo.title
         
@@ -41,10 +42,9 @@ extension FlickrMainViewController: UICollectionViewDataSource, UICollectionView
     
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
         
-        if indexPath.row == (photos.count - 1) {
+        if indexPath.row == (viewModel.photos.count - 9) {
             loadNextPage()
         }
-        
     }
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
@@ -71,7 +71,7 @@ extension FlickrMainViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         searchBar.resignFirstResponder()
         self.searchText = searchBar.text ?? ""
-        self.photos.removeAll()
+        self.viewModel.photos.removeAll()
         
         getFlickrPhotos()
     }
@@ -80,47 +80,14 @@ extension FlickrMainViewController: UISearchBarDelegate {
 // MARK: - Networking
 extension FlickrMainViewController {
     func getFlickrPhotos() {
-        
-        fetchFlickrPhotos(searchText: self.searchText) { [weak self] photos in
+        viewModel.getFlickrPhotos(searchText: self.searchText, pageNo: self.pageNo) { [weak self] _ in
             guard let selfie = self else { return }
-            
-            if let totalPages = photos?.total {
-                selfie.totalPages = Int(totalPages) ?? 1
-            }
-            
-            if let photos = photos?.photo {
-                selfie.photos.append(contentsOf: photos)
-                selfie.collectionView.reloadData()
-            }
-        }
-    }
-    
-    func fetchFlickrPhotos(searchText: String? = nil, completion: ((Photos?) -> Void)? = nil) {
-        let url = URL(string: "https://api.flickr.com/services/rest/")!
-        var parameters = [
-            "method" : "flickr.photos.search",
-            "sort": "relevance",
-            "format" : "json",
-            "nojsoncallback" : "1",
-        ]
-        parameters["text"] = searchText
-        parameters["page"] = String(pageNo)
-        parameters["api_key"] = FlickrConstants.api_key
-        parameters["per_page"] = String(FlickrConstants.per_page)
-        
-        AF.request(url, parameters: parameters).validate()
-            .responseDecodable(of: PhotoResponse.self) { response in
-                guard let photos = response.value else {
-                    completion?(nil)
-                    return }
-                
-                print(photos)
-                completion?(photos.photos)
+            selfie.collectionView.reloadData()
         }
     }
     
     private func loadNextPage() {
-        if pageNo < totalPages {
+        if pageNo < viewModel.totalPages {
             pageNo += 1
             getFlickrPhotos()
         }
